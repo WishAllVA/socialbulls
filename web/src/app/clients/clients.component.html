@@ -1,0 +1,15 @@
+<div class="carousel">
+  <ng-container *ngFor="let data of clientData; let i = index">
+    <app-client-card *ngIf="i === currentSlide" class="slide" [title]="data.title" [url]="data.imageUrl"
+      [visitUrl]="data.visitUrl" @carouselAnimation>
+    </app-client-card>
+  </ng-container>
+
+  <!-- controls -->
+  <button class="control prev" (click)="onPreviousClick()">
+    <span class="arrow left"></span>
+  </button>
+  <button class="control next" (click)="onNextClick()">
+    <span class="arrow right"></span>
+  </button>
+</div>
