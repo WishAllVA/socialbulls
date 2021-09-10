@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SplashComponent } from './splash/splash.component';
 
 const routes: Routes = [
-  { path: '', component: SplashComponent },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'clients', component: ClientsComponent }

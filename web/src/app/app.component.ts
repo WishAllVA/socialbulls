@@ -8,7 +8,7 @@ import { SplashComponent } from './splash/splash.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'web';
+  title = 'Sociallbulls';
   @HostBinding("class.drawer-open")
   isDrawerOpen: boolean = false;
 
