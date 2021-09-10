@@ -1,0 +1,17 @@
+<header>
+  <nav class="navbar navbar-expand-md" id="navbar">
+    <div class="container">
+      <div class="nav-toggler" [class.drawer-open]="isDrawerOpen" id="nav-toggler"
+        (click)="toggleNavDrawer(!isDrawerOpen)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a class="navbar-brand override" routerLink="/">
+        LOGO
+      </a>
+      <app-navdrawer [isDrawerOpen]="isDrawerOpen" (drawerToggleEmitter)="toggleNavDrawer($event)"></app-navdrawer>
+    </div>
+  </nav>
+</header>

@@ -11,6 +11,8 @@ import { ClientCardComponent } from './client-card/client-card.component';
 import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarModule } from './navbar/navbar.module';
+import { NavdrawerComponent } from './navbar/navdrawer/navdrawer.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { NavbarModule } from './navbar/navbar.module';
     ClientsComponent,
     ClientCardComponent,
     NavbarComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule,
