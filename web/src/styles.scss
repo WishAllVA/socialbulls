@@ -4,3 +4,9 @@ html, body { height: 100%;
     // overflow: hidden;
    }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+  }

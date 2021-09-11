@@ -17,13 +17,15 @@
   <app-root></app-root>
 </body>
 <script>
-  var tween = KUTE.fromTo(
-    '#blob1',
+  console.log(KUTE.fromTo)
+  const tween = KUTE.fromTo(
+    `#blob1`,
     { path: '#blob1' },
     { path: '#blob2' },
     { repeat: 999, duration: 3000, yoyo: true }
-  )
-  tween.start()
+  ) || ''
+  console.log(tween)
+  tween && tween.start()
 </script>
 
 </html>

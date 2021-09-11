@@ -8,10 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientCardComponent } from './client-card/client-card.component';
-import { MatButtonModule, MatCardModule, MatIconModule } from '@angular/material';
-import { NavbarComponent } from './navbar/navbar.component';
-import { NavbarModule } from './navbar/navbar.module';
-import { NavdrawerComponent } from './navbar/navdrawer/navdrawer.component';
+import { MatButtonModule, MatCardModule, MatDividerModule, MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
@@ -21,7 +18,6 @@ import { SplashComponent } from './splash/splash.component';
     AboutComponent,
     ClientsComponent,
     ClientCardComponent,
-    NavbarComponent,
     SplashComponent
   ],
   imports: [
@@ -30,7 +26,9 @@ import { SplashComponent } from './splash/splash.component';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    NavbarModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatDividerModule,
     BrowserAnimationsModule
   ],
   providers: [],
