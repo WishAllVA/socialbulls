@@ -8,8 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientCardComponent } from './client-card/client-card.component';
-import { MatButtonModule, MatCardModule, MatDividerModule, MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatDividerModule, MatIconModule, MatListModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { SplashComponent } from './splash/splash.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { SplashComponent } from './splash/splash.component';
     AboutComponent,
     ClientsComponent,
     ClientCardComponent,
-    SplashComponent
+    SplashComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,10 @@ import { SplashComponent } from './splash/splash.component';
     MatToolbarModule,
     MatSidenavModule,
     MatDividerModule,
-    BrowserAnimationsModule
+    MatListModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

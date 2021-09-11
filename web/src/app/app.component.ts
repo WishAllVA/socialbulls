@@ -15,25 +15,9 @@ import { animate, style, transition, trigger, useAnimation } from '@angular/anim
   ]
 })
 export class AppComponent implements OnInit {
-  title = 'Sociallbulls';
-  @HostBinding("class.drawer-open")
-  isDrawerOpen: boolean = false;
+
 
   ngOnInit() {
-    this.navSlide();
-  }
-
-  navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('nav-active')
-      this.isDrawerOpen = true
-    })
-  }
-
-  toggleDrawer(isDrawerOpen: boolean) {
-    this.isDrawerOpen = isDrawerOpen;
   }
 
 }
