@@ -114,6 +114,7 @@ h1 {
     bottom: 20px;
     right: 40px;
     cursor: pointer;
+    z-index: 5
 }
 
 .social-media {
@@ -122,8 +123,21 @@ h1 {
     left: 30%;
 }
 
-.instagram-image,.facebook-image,.twitter-image,.linkedin-image {
+.instagram-image, .facebook-image, .twitter-image, .linkedin-image {
     width: 4%;
     opacity: 1;
     margin-right: 150px;
+}
+
+.copyright {
+    position: relative;
+    top: 90%;
+}
+
+.app-footer {
+    position: absolute;
+    z-index: 2;
+    bottom: -70%;
+    width: 99%;
+    overflow-x: hidden;
 }

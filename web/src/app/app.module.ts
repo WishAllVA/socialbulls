@@ -13,6 +13,7 @@ import { SplashComponent } from './splash/splash.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     ClientCardComponent,
     SplashComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
