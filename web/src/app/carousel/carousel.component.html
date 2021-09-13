@@ -1,0 +1,23 @@
+<div class="carousel-container" #carouselContainer>
+  <div class="customer">
+    <h3>Our customers</h3>
+  </div>
+  <div class="carousel" #carousel>
+    <figure class="carousel__item item--{{i+1}}" *ngFor="let item of data; let i = index">
+      <img src="{{ item.url }}" alt="image {{ i + 1 }}" />
+      <figcaption class="title">{{ item.title }}</figcaption>
+    </figure>
+  </div>
+  <button class="prev" (click)="prev()" [disabled]="prevSlideFinished || isAnimating"
+    [ngStyle]="prevSlideFinished && { opacity: 0.1, cursor: 'default' }">
+    <svg class="icon">
+      <use href="../../assets/images/icons.svg#icon-chevron-with-circle-left"></use>
+    </svg>
+  </button>
+  <button class="next" (click)="next()" [disabled]="isAnimating || middleIndex <= 1"
+    [ngStyle]="middleIndex <= 1 && { opacity: 0.1, cursor: 'default' }">
+    <svg class="icon">
+      <use href="../../assets/images/icons.svg#icon-chevron-with-circle-right"></use>
+    </svg>
+  </button>
+</div>

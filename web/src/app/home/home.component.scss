@@ -4,17 +4,22 @@ section {
     flex-direction: column;
     align-items: center;
     min-height: 100px;
-    padding: 70px 0vw;
+    padding: 70px 20vw 0px 0vw;
 }
+
+// #visual {
+//     position: absolute;
+// }
 
 h1 {
     font-size: 5rem;
-    font-family: 'Raleway'
+    font-family: 'Allison';
+    letter-spacing: 10px
 }
 
 .header-caption {
     position: absolute;
-    top: 10%;
+    top: 40%;
     left: 10%;
     width: 400px;
 }
@@ -140,4 +145,12 @@ h1 {
     bottom: -70%;
     width: 99%;
     overflow-x: hidden;
+}
+
+.clients {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
