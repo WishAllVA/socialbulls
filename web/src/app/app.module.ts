@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from './services/services.component';
 import { FlipCardModule } from './flip-card/flip-card.module';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FlipCardModule } from './flip-card/flip-card.module';
     SidenavListComponent,
     FooterComponent,
     CarouselComponent,
-    ServicesComponent
+    ServicesComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
