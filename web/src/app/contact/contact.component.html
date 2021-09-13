@@ -1,0 +1,43 @@
+<div class="contact-section">
+  <div class="contact-info">
+    <div @contactAnimation1><i class="fas fa-map-marker-alt"></i>Chandigarh, India</div>
+    <div @contactAnimation1><i class="fas fa-envelope"></i>socialbulls@gmail.com</div>
+    <div @contactAnimation1><i class="fas fa-phone"></i>+91 7508 857 157</div>
+    <div @contactAnimation1><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+  </div>
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form class="contact" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <mat-form-field @contactAnimation2>
+        <input matInput placeholder="Your Name" formControlName="name">
+      </mat-form-field>
+      <mat-form-field @contactAnimation2>
+        <input matInput placeholder="Your Email" formControlName="email">
+        <mat-error *ngIf="email.invalid && email.touched">Your email does not look correct</mat-error>
+      </mat-form-field>
+      <mat-form-field @contactAnimation2>
+        <input matInput placeholder="Enter your 10-digit Phone Number" formControlName="phone">
+      </mat-form-field>
+      <mat-form-field @contactAnimation2>
+        <input matInput placeholder="Message" formControlName="message">
+      </mat-form-field>
+      <mat-form-field @contactAnimation2>
+        <mat-select formControlName="service" placeholder="Choose a Service">
+          <mat-option value="socialMediaMarketing">Social Media Marketing</mat-option>
+          <mat-option value="mediaPlanning">Media Planning</mat-option>
+          <mat-option value="collateralDesign">Collateral Design</mat-option>
+          <mat-option value="websiteDesignandDevelopment">Website Design and Development</mat-option>
+          <mat-option value="youthDesign">Youth Design</mat-option>
+          <mat-option value="seo">Search Engine Optimization</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="form-footer">
+        <mat-checkbox mat-raised-button formControlName="agree" color="primary">Is everything correct</mat-checkbox>
+
+        <!-- <p>Complete the form to enable button.</p> -->
+        <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+      </div>
+    </form>
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  </div>
+</div>

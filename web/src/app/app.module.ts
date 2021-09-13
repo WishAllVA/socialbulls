@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { MatButtonModule, MatCardModule, MatDividerModule, MatIconModule, MatListModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { SplashComponent } from './splash/splash.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -17,6 +17,9 @@ import { ServicesComponent } from './services/services.component';
 import { FlipCardModule } from './flip-card/flip-card.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -30,22 +33,31 @@ import { SigninComponent } from './auth/signin/signin.component';
     CarouselComponent,
     ServicesComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    ContactComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatSelectModule,
     MatDividerModule,
     MatListModule,
     MatMenuModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    FlipCardModule
+    FlipCardModule,
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
