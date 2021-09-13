@@ -2,6 +2,8 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { SplashComponent } from './splash/splash.component';
 import { fadeIn, fadeOut } from 'src/animations/nav.animation';
 import { animate, style, transition, trigger, useAnimation } from '@angular/animations';
+import { data } from './helpers/data';
+
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,7 @@ import { animate, style, transition, trigger, useAnimation } from '@angular/anim
   ]
 })
 export class AppComponent implements OnInit {
-
+  data = data;
 
   ngOnInit() {
   }
