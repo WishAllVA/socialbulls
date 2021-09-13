@@ -27,7 +27,7 @@ export class SplashComponent implements OnInit {
       setTimeout(() => {
         this.showSplash = false;
       }, 700)
-    }, 2700)
+    }, 3200)
   }
 
 

@@ -1,0 +1,15 @@
+.service-container {
+    position: absolute;
+    left: 10%;
+    width: 70%;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // align-items: center;
+}
