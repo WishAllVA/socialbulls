@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd src && nodemon app"
   },
   "keywords": [],
   "author": "Vishal Arora",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.5"
+    "express-jwt": "^6.1.0",
+    "mongoose": "^6.0.5",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.6.3"
   },
   "devDependencies": {
     "jest": "^27.1.1",
