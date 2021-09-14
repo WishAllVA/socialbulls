@@ -21,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BlogsComponent } from './blogs/blogs.component';
 import { AlertModalComponent } from './alert-modal/alert-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AlertModalComponent } from './alert-modal/alert-modal.component';
     MatListModule,
     MatMenuModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FlexLayoutModule,
     FlipCardModule,
     ReactiveFormsModule,

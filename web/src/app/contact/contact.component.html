@@ -35,10 +35,10 @@
         <mat-checkbox mat-raised-button formControlName="agree" color="primary">Is everything correct</mat-checkbox>
 
         <!-- <p>Complete the form to enable button.</p> -->
-        <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="contactForm.valid">Submit</button>
       </div>
     </form>
     <mat-spinner *ngIf="showSpinner"></mat-spinner>
   </div>
 </div>
-<app-alert-modal [error]="'error'" *ngIf="error" (close)="error=null"></app-alert-modal>
+<!-- <app-alert-modal [error]="'error'" *ngIf="error" (close)="error=null"></app-alert-modal> -->

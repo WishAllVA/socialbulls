@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { animate, style, transition, trigger, useAnimation } from '@angular/animations';
 import { slideIn, slideInFromRight, slideOut } from 'src/animations/contact.animation';
+import { ContactService } from 'src/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -30,7 +31,7 @@ export class ContactComponent implements OnInit {
     agree: new FormControl(false, Validators.requiredTrue),
   });
 
-  constructor() { }
+  constructor(public contactService: ContactService) { }
 
   ngOnInit() {
 
@@ -42,6 +43,9 @@ export class ContactComponent implements OnInit {
   get email() {
     return this.contactForm.get('email')
   }
+  get phone() {
+    return this.contactForm.get('phone')
+  }
 
   get message() {
     return this.contactForm.get('message')
@@ -52,11 +56,28 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.showSpinner = true;
+    const name = this.name.value
+    const email = this.email.value
+    const phone = this.phone.value
+    const message = this.message.value
+    console.log({ name, email, phone, message })
+    this.addContactMessage({ name, email, phone, message })
     setTimeout(() => {
       this.showSpinner = false
       this.contactForm.reset();
       this.contactForm.markAsUntouched();
     }, 2000)
+  }
+
+  addContactMessage = ({ name, email, phone, message }) => {
+    this.contactService.addContact({
+      name,
+      email,
+      phone,
+      message
+    }).subscribe((data: any) => {
+      console.log(data)
+    })
   }
 
 }

@@ -2,6 +2,7 @@ const app = require('../server')
 const express = require('express')
 const logger = require('morgan')
 const mongoose = require('mongoose')
+const cors = require('cors')
 require('dotenv').config()
 
 const contactRouter = require('./routes/contact.routes')
@@ -9,6 +10,11 @@ const contactRouter = require('./routes/contact.routes')
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 const dbName = process.env.DB_NAME
 const dbUser = process.env.DB_USER
@@ -23,6 +29,8 @@ mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster0.vyola.mongodb.net/$
     .catch((err) => console.log(err))
 
 mongoose.Promise = global.Promise
+
+app.use(cors(corsOptions))
 
 app.use('/contact', contactRouter)
 
