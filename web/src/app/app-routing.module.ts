@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'blogs', component: BlogsComponent },
-  { path: '', component: ContactComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({

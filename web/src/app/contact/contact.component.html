@@ -41,3 +41,4 @@
     <mat-spinner *ngIf="showSpinner"></mat-spinner>
   </div>
 </div>
+<app-alert-modal [error]="'error'" *ngIf="error" (close)="error=null"></app-alert-modal>

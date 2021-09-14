@@ -54,6 +54,8 @@ export class ContactComponent implements OnInit {
     this.showSpinner = true;
     setTimeout(() => {
       this.showSpinner = false
+      this.contactForm.reset();
+      this.contactForm.markAsUntouched();
     }, 2000)
   }
 
