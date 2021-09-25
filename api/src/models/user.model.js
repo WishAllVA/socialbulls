@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
     name: String,
     email: {
         type: String,
@@ -9,5 +8,6 @@ const userSchema = new mongoose.Schema({
     },
     password: String,
     phone_number: Number,
+    token: String
 });
 module.exports = mongoose.model('User', userSchema);
