@@ -6,7 +6,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         lowercase: true
     },
+    emailVerified: {
+        type: Boolean,
+        default: false,
+        required: true
+    },
     password: String,
+    countryCode: String,
     phone_number: Number,
     token: String
 });

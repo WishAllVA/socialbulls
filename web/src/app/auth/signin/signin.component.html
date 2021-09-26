@@ -1,5 +1,19 @@
-<div class="custom-shape-divider-top-1631541156">
-  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-    <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
-  </svg>
+<div class="login-section">
+  <div class="login-form">
+    <h2>Login</h2>
+    <form class="contact" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Your Email" formControlName="email">
+        <mat-error *ngIf="email.invalid && email.touched">Your email does not look correct</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
+      <div class="form-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">Submit</button>
+      </div>
+    </form>
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  </div>
 </div>
+<!-- <app-alert-modal [error]="'error'" *ngIf="error" (close)="error=null"></app-alert-modal> -->

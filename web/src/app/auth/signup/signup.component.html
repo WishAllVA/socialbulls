@@ -1,3 +1,28 @@
-<p>
-  signup works!
-</p>
+<div class="signup-section">
+  <div class="signup-form">
+    <h2>Login</h2>
+    <form class="signup" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Your Name" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Your Email" formControlName="email">
+        <mat-error *ngIf="email.invalid && email.touched">Your email does not look correct</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Your Phone Number" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Your Password" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Confirm Your Password" formControlName="email">
+      </mat-form-field>
+      <div class="form-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Submit</button>
+      </div>
+    </form>
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  </div>
+</div>
+<!-- <app-alert-modal [error]="'error'" *ngIf="error" (close)="error=null"></app-alert-modal> -->

@@ -30,7 +30,9 @@ const signin = async (req, res) => {
             // user
             res.status(200).json(user);
         }
-        res.status(400).send("Invalid Credentials");
+        res.status(400).json({
+            message: "Invalid credentials"
+        })
 
     } catch (err) {
         console.log(err)
