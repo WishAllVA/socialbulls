@@ -12,14 +12,12 @@ section {
 // }
 
 h1 {
-    font-size: 5rem;
-    // font-family: 'Allison';
-    letter-spacing: 10px
+    font-size: 4rem;
 }
 
 .header-caption {
     position: absolute;
-    top: 40%;
+    top: 100%;
     left: 10%;
     width: 400px;
 }
@@ -69,7 +67,6 @@ h1 {
     height: 100%;
     background-color: #3c31dd;
     transform: translate(-4%, 40%);
-    z-index: 1;
 }
 
 .wave {
@@ -118,8 +115,7 @@ h1 {
     position: fixed;
     bottom: 20px;
     right: 40px;
-    cursor: pointer;
-    z-index: 5
+    cursor: pointer
 }
 
 .social-media {
@@ -141,9 +137,9 @@ h1 {
 
 .app-footer {
     position: absolute;
-    z-index: 2;
-    bottom: -70%;
-    width: 99%;
+    top: 490%;
+    left: 0%;
+    width: 100%;
     overflow-x: hidden;
 }
 

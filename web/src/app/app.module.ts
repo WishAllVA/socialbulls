@@ -24,6 +24,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { AlertModalComponent } from './alert-modal/alert-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpinningBlobComponent } from './spinning-blob/spinning-blob.component';
+import { ParallaxDirective } from './parallax.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SpinningBlobComponent } from './spinning-blob/spinning-blob.component';
     ContactComponent,
     BlogsComponent,
     AlertModalComponent,
-    SpinningBlobComponent
+    SpinningBlobComponent,
+    ParallaxDirective
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,12 @@ import { SpinningBlobComponent } from './spinning-blob/spinning-blob.component';
     FlipCardModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      progressBar: true,
+      progressAnimation: 'increasing',
+      preventDuplicates: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
