@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from './services/services.component';
 import { FlipCardModule } from './flip-card/flip-card.module';
+import { ToastrModule } from 'ngx-toastr';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { ContactComponent } from './contact/contact.component';
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BlogsComponent } from './blogs/blogs.component';
 import { AlertModalComponent } from './alert-modal/alert-modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SpinningBlobComponent } from './spinning-blob/spinning-blob.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     SigninComponent,
     ContactComponent,
     BlogsComponent,
-    AlertModalComponent
+    AlertModalComponent,
+    SpinningBlobComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     FlipCardModule,
     ReactiveFormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
