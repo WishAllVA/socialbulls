@@ -8,6 +8,11 @@ body {
   font-family: 'Spartan', "Helvetica Neue", sans-serif; 
 }
 
+::-webkit-scrollbar {
+  width: 0%;
+  height: 0%;
+}
+
 %buttonStyles {
   position: absolute;
   bottom: 10%;
@@ -22,7 +27,7 @@ body {
   max-width: 1500px;
   height: 500px;
   margin: 10% auto;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   position: relative;
 }
 
@@ -31,13 +36,13 @@ body {
   width: 830px;
   height: inherit;
   margin: 0 auto;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__item {
     position: absolute;
     box-shadow: 0 10px 15px rgba(34, 34, 34, 0.2);
     border-radius: 30px;
-    overflow: hidden;
+    // overflow: hidden;
     width: 650px;
     height: 400px;
     transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);

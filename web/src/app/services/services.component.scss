@@ -1,10 +1,17 @@
 .service-container {
+    padding: 30px;
     position: absolute;
-    left: 10%;
-    width: 70%;
-    height: 700px;
+    height: 88vh;
+    width: 95vw;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    // border: 1px solid red
+}
+
+.service-card {
+    margin: 40px 15px
+
 }
 
 .row {

@@ -25,6 +25,14 @@ import { AlertModalComponent } from './alert-modal/alert-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpinningBlobComponent } from './spinning-blob/spinning-blob.component';
 import { ParallaxDirective } from './parallax.directive';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ProfileComponent } from './profile/profile.component';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -43,7 +51,8 @@ import { ParallaxDirective } from './parallax.directive';
     BlogsComponent,
     AlertModalComponent,
     SpinningBlobComponent,
-    ParallaxDirective
+    ParallaxDirective,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +76,7 @@ import { ParallaxDirective } from './parallax.directive';
     FlipCardModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
+    PerfectScrollbarModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       progressBar: true,
@@ -74,7 +84,12 @@ import { ParallaxDirective } from './parallax.directive';
       preventDuplicates: true
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

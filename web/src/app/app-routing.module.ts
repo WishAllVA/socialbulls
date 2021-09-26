@@ -6,6 +6,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 import { ServicesComponent } from './services/services.component';
 import { SplashComponent } from './splash/splash.component';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'blogs', component: BlogsComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '', component: HomeComponent },
 ];
 

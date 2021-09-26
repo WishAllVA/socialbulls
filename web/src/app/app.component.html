@@ -3,15 +3,18 @@
         <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-        <main>
-            <router-outlet></router-outlet>
+        <app-header (sidenavToggle)="sidenav.toggle()" *ngIf="isLoggedIn"></app-header>
+        <perfect-scrollbar style="max-width: 100%; height: 1200px;" [config]="config">
+            <main>
+                <router-outlet></router-outlet>
+                <router-outlet name="auth"></router-outlet>
 
-        </main>
-        <!-- <app-footer></app-footer> -->
+            </main>
+            <!-- <app-footer></app-footer> -->
 
+        </perfect-scrollbar>
     </mat-sidenav-content>
 </mat-sidenav-container>
 <!-- <app-carousel [data]="data"></app-carousel> -->
 
-<!-- <app-splash></app-splash> -->
+<app-splash></app-splash>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class SigninComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -46,6 +47,10 @@ export class SigninComponent implements OnInit {
     }).subscribe((data: any) => {
       console.log(data)
     })
+  }
+
+  goToSignup = () => {
+    this.router.navigateByUrl('/signup')
   }
 
 }

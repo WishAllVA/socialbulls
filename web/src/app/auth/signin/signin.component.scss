@@ -3,6 +3,49 @@
     top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     line-height: 0;
+}
+
+mat-form-field {
+    width: 50%;
+}
+
+.title {
+    margin-bottom: 20px;
+    margin-left: 40%;
+}
+
+.login-section {
+    margin: 20px 150px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    height: 70%;
+    width: 40vw;
+    // border: 1px solid black;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    margin: 2% 0 15% 0;
+}
+
+.no-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

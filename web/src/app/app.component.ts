@@ -3,6 +3,9 @@ import { SplashComponent } from './splash/splash.component';
 import { fadeIn, fadeOut } from 'src/animations/nav.animation';
 import { animate, style, transition, trigger, useAnimation } from '@angular/animations';
 import { data } from './helpers/data';
+import { LocalStorageService } from './local-storage.service';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,8 +21,14 @@ import { data } from './helpers/data';
 })
 export class AppComponent implements OnInit {
   data = data;
+  isLoggedIn: boolean = false;
+  config: PerfectScrollbarConfigInterface = {
+    wheelSpeed: 0.7
+  }
+  constructor(private localStorageService: LocalStorageService, private router: Router) { }
 
   ngOnInit() {
+    this.isLoggedIn = this.localStorageService.getUserToken() ? true : true;
   }
 
 }
