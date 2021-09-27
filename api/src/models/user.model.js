@@ -12,8 +12,12 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     password: String,
-    countryCode: String,
+    countryCode: {
+        type: String,
+        default: '91'
+    },
     phone_number: Number,
+    dob: Date,
     token: String
 });
 module.exports = mongoose.model('User', userSchema);

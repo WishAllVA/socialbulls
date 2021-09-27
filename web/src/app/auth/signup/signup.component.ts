@@ -16,11 +16,14 @@ export class SignupComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
+    dob: new FormControl(null),
     confirm_password: new FormControl('', Validators.required)
   })
 
   constructor(private authService: AuthService, private router: Router) { }
 
+  minDate = new Date(1900, 0, 1);
+  maxDate = new Date(2020, 0, 1);
   ngOnInit() {
   }
 
@@ -32,6 +35,9 @@ export class SignupComponent implements OnInit {
   }
   get phone() {
     return this.signupForm.get('phone')
+  }
+  get dob() {
+    return this.signupForm.get('dob')
   }
   get password() {
     return this.signupForm.get('password')
@@ -46,7 +52,9 @@ export class SignupComponent implements OnInit {
     const email = this.email.value
     const phone = this.phone.value
     const password = this.password.value
-    this.signup({ name, email, phone, password })
+    const dob = this.dob.value
+    console.log(dob)
+    // this.signup({ name, email, phone, password, dob })
     setTimeout(() => {
       this.showSpinner = false
       this.signupForm.reset();
@@ -54,10 +62,13 @@ export class SignupComponent implements OnInit {
     }, 2000)
   }
 
-  signup = ({ name, email, phone, password }) => {
-    this.authService.signin({
+  signup = ({ name, email, phone, password, dob }) => {
+    this.authService.signup({
+      name,
       email,
-      password
+      phone,
+      password,
+      dob
     }).subscribe((data: any) => {
       console.log(data)
     })

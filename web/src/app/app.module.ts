@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { MatButtonModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { SplashComponent } from './splash/splash.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -79,6 +79,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FlipCardModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     PerfectScrollbarModule,
     ModalDialogModule.forRoot(),
     ToastrModule.forRoot({
