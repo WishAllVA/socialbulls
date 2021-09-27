@@ -53,4 +53,8 @@ export class SigninComponent implements OnInit {
     this.router.navigateByUrl('/signup')
   }
 
+  goToForgotPassword = () => {
+    this.router.navigateByUrl('/forgot-password')
+  }
+
 }

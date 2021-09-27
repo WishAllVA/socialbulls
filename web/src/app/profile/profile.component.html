@@ -1,3 +1,41 @@
-<p>
-  profile works!
-</p>
+<div class="container">
+  <div class="no-login" *ngIf="!isLoggedIn">
+    <h1>Login to view your profile</h1>
+    <button class="btn btn-primary" (click)="goToLogin()">Login</button>
+  </div>
+  <div class="loggedIn" *ngIf="isLoggedIn">
+    <div class="title">
+      <h2>Profile</h2>
+    </div>
+    <div class="forms">
+      <div class="profile_picture" (ngSubmit)="onSubmit()">
+        <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+        <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+      </div>
+      <form class="profile" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="email">
+          <mat-error *ngIf="email.invalid && email.touched">Your email does not look correct</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="phone">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="address">
+        </mat-form-field>
+        <div class="form-footer">
+          <button type="button" class="btn btn-primary submit" [hidden]="isEdit" (click)="editHandler()">Edit</button>
+          <button type="button" class="btn btn-danger submit" [hidden]="isEdit"
+            (click)="deleteHandler()">Delete</button>
+        </div>
+        <div class="no-account">
+          <button type="button" class="btn btn-primary" (click)="saveHandler()" [hidden]="!isEdit">Save</button>
+          <button type="button" class="btn btn-secondary" (click)="cancelHandler()" [hidden]="!isEdit">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

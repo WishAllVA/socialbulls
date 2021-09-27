@@ -14,7 +14,7 @@
       </mat-form-field>
       <div class="form-footer">
         <button type="submit" class="btn btn-success submit" [disabled]="!loginForm.valid">Login</button>
-        <button type="button" class="btn btn-primary submit">Forgot Password</button>
+        <button type="button" class="btn btn-primary submit" (click)="goToForgotPassword()">Forgot Password</button>
       </div>
       <div class="no-account">
         <p>Don't have an account?</p> <button type="button" class="btn btn-secondary"

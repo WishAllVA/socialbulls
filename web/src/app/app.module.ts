@@ -29,6 +29,8 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { ProfileComponent } from './profile/profile.component';
+import { ModalDialogModule } from 'ngx-modal-dialog';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component'
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -52,7 +54,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AlertModalComponent,
     SpinningBlobComponent,
     ParallaxDirective,
-    ProfileComponent
+    ProfileComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +80,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReactiveFormsModule,
     MatProgressSpinnerModule,
     PerfectScrollbarModule,
+    ModalDialogModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 2000,
       progressBar: true,
@@ -90,6 +94,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ProfileComponent
+  ]
 })
 export class AppModule { }
